@@ -54,7 +54,7 @@ CFLAGS+= -DFIGTREE_NO_ANN
 else
 CFLAGS+= -I$(ANNINCDIR)
 ifneq ($(FIGTREE_LIB_TYPE),static)
-LDFLAGS= -L$(ANNLIBDIR) -lann_figtree_version
+LDFLAGS= -L$(ANNLIBDIR) -lann_figtree_version -Wl,-rpath,'$$ORIGIN'
 endif
 endif
 
